@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kf5-j2-JdX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--User Settings View Controller-->
+        <scene sceneID="AdV-cE-moa">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="ohe-qt-A9g" customClass="MMUserSettingsViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5AP-O5-pIB"/>
+                        <viewControllerLayoutGuide type="bottom" id="y2N-u1-BZh"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="BaV-gK-Ayi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ec-FU-mZ5">
+                                <rect key="frame" x="20" y="69" width="560" height="511"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="IMl-Tp-Q26">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IMl-Tp-Q26" id="hHB-Nv-842">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epM-u4-r9i">
+                                <rect key="frame" x="277" y="20" width="46" height="41"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="V"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mme-si-GWV" appends="YES" id="cXx-ke-eex"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxY-V2-dI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="Mme-si-GWV">
+                    <connections>
+                        <action selector="SwipeUserSettingsClosed:" destination="ohe-qt-A9g" id="ZOn-iv-p76"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="220" y="-363"/>
+        </scene>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="M4F-W3-TgH">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kf5-j2-JdX" customClass="MMTutorialPageViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Qp-Sq-qBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="339"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V6w-ce-8iC">
+            <objects>
+                <viewController storyboardIdentifier="TutorialWelcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ek5-d7-gC2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ohJ-LM-KF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ExT-Ri-Anc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RI3-df-VOz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-Ry-gHX">
+                                <rect key="frame" x="60" y="28" width="463" height="281"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Welcome to MeditateMe  Our goal using this app is to build a lasting meditation habit to improve our everyday outlook on life.  By meditating for 15-30 minutes a day over a sustained period of time our brains physiology changes. There are many scientifically proven studies which support this claim.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLn-XE-CZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-931" y="1060"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XZg-fi-kds">
+            <objects>
+                <viewController storyboardIdentifier="TutorialDescription" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Iz-Eu-pJm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6E6-NW-Tpi"/>
+                        <viewControllerLayoutGuide type="bottom" id="JKF-70-aAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UKW-0m-Gsg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-Bg-jQR">
+                                <rect key="frame" x="139" y="491" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="ohe-qt-A9g" kind="presentation" id="Uh5-fK-5OK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yiB-Zt-5mO">
+                                <rect key="frame" x="73" y="28" width="240" height="233.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">To begin, we will start by setting our initial meditation timers. Those who are familiar with meditation may feel comfortable starting out with a longer meditation time. It is recommended to start with a time which allows us to familiarize ourselves with the methods of meditation and let the time spent meditating grow naturally.  Complete beginners should start at 3-5 minute periods daily.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wC-Uk-rum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="1060"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G68-G8-4yg">
+            <objects>
+                <viewController storyboardIdentifier="TutorialSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hW4-Sm-HLC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KuT-aa-OxT"/>
+                        <viewControllerLayoutGuide type="bottom" id="wL8-UV-uT7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UG2-Ra-ggg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-Qa-eDz">
+                                <rect key="frame" x="204" y="498" width="121" height="30"/>
+                                <state key="normal" title="Let's Get Started!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="aLA-NM-Ice"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1tw-f8-yBy">
+                                <rect key="frame" x="132" y="40" width="240" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">After a set number of meditations we will increase the amount of time spent meditating up to 30 minute intervals. After that, it's up to you if you want to increase the timer!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Cv-wB-U94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="1060"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-4F-FAK">
+                                <rect key="frame" x="237" y="285" width="127" height="30"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CI8-Yp-Mt2"/>
+                                    <constraint firstAttribute="width" constant="127" id="Utv-lX-09R"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7x-wt-l5a"/>
+                                    <outletCollection property="gestureRecognizers" destination="6rO-zg-wwo" appends="YES" id="m4R-ft-nb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTO-fW-zK9">
+                                <rect key="frame" x="62" y="76" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="ohe-qt-A9g" kind="presentation" id="TZS-n8-X8Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2p6-4F-FAK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YlF-W8-uUr"/>
+                            <constraint firstItem="2p6-4F-FAK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNB-2c-LFE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonStartTimerOutlet" destination="2p6-4F-FAK" id="tWp-TI-PAw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="6rO-zg-wwo">
+                    <connections>
+                        <action selector="startButtonLongPress:" destination="BYZ-38-t0r" id="PuQ-up-fF5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="68" y="339"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uh5-fK-5OK"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E2EA6631D00FABA00090D08 /* MMTutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EA6621D00FABA00090D08 /* MMTutorialPageViewController.swift */; };
+		7E5FDCE01CD5107C00FEF026 /* MMButtonStartTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */; };
+		7E5FDCE21CD6F27000FEF026 /* MMUserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */; };
+		7E5FDCE41CD7B61500FEF026 /* MMDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */; };
+		7EB9430F1CD26D800011408F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9430E1CD26D800011408F /* AppDelegate.swift */; };
+		7EB943111CD26D800011408F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB943101CD26D800011408F /* ViewController.swift */; };
+		7EB943141CD26D800011408F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943121CD26D800011408F /* Main.storyboard */; };
+		7EB943161CD26D800011408F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943151CD26D800011408F /* Assets.xcassets */; };
+		7EB943191CD26D800011408F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943171CD26D800011408F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E2EA6621D00FABA00090D08 /* MMTutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTutorialPageViewController.swift; sourceTree = "<group>"; };
+		7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMButtonStartTimerController.swift; sourceTree = "<group>"; };
+		7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMUserSettingsViewController.swift; sourceTree = "<group>"; };
+		7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDismissAnimator.swift; sourceTree = "<group>"; };
+		7EB9430B1CD26D800011408F /* MeditateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB9430E1CD26D800011408F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EB943101CD26D800011408F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EB943131CD26D800011408F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EB943151CD26D800011408F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EB943181CD26D800011408F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EB9431A1CD26D800011408F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EB943081CD26D800011408F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EB943021CD26D800011408F = {
+			isa = PBXGroup;
+			children = (
+				7EB9430D1CD26D800011408F /* MeditateMe */,
+				7EB9430C1CD26D800011408F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EB9430C1CD26D800011408F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EB9430B1CD26D800011408F /* MeditateMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EB9430D1CD26D800011408F /* MeditateMe */ = {
+			isa = PBXGroup;
+			children = (
+				7EB9430E1CD26D800011408F /* AppDelegate.swift */,
+				7EB943101CD26D800011408F /* ViewController.swift */,
+				7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */,
+				7EB943121CD26D800011408F /* Main.storyboard */,
+				7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */,
+				7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */,
+				7E2EA6621D00FABA00090D08 /* MMTutorialPageViewController.swift */,
+				7EB943151CD26D800011408F /* Assets.xcassets */,
+				7EB943171CD26D800011408F /* LaunchScreen.storyboard */,
+				7EB9431A1CD26D800011408F /* Info.plist */,
+			);
+			path = MeditateMe;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EB9430A1CD26D800011408F /* MeditateMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB9431D1CD26D800011408F /* Build configuration list for PBXNativeTarget "MeditateMe" */;
+			buildPhases = (
+				7EB943071CD26D800011408F /* Sources */,
+				7EB943081CD26D800011408F /* Frameworks */,
+				7EB943091CD26D800011408F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeditateMe;
+			productName = MeditateMe;
+			productReference = 7EB9430B1CD26D800011408F /* MeditateMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EB943031CD26D800011408F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Joseph Chamberlain";
+				TargetAttributes = {
+					7EB9430A1CD26D800011408F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 7EB943061CD26D800011408F /* Build configuration list for PBXProject "MeditateMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EB943021CD26D800011408F;
+			productRefGroup = 7EB9430C1CD26D800011408F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EB9430A1CD26D800011408F /* MeditateMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EB943091CD26D800011408F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB943191CD26D800011408F /* LaunchScreen.storyboard in Resources */,
+				7EB943161CD26D800011408F /* Assets.xcassets in Resources */,
+				7EB943141CD26D800011408F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EB943071CD26D800011408F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB943111CD26D800011408F /* ViewController.swift in Sources */,
+				7E5FDCE41CD7B61500FEF026 /* MMDismissAnimator.swift in Sources */,
+				7EB9430F1CD26D800011408F /* AppDelegate.swift in Sources */,
+				7E2EA6631D00FABA00090D08 /* MMTutorialPageViewController.swift in Sources */,
+				7E5FDCE21CD6F27000FEF026 /* MMUserSettingsViewController.swift in Sources */,
+				7E5FDCE01CD5107C00FEF026 /* MMButtonStartTimerController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EB943121CD26D800011408F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB943131CD26D800011408F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EB943171CD26D800011408F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB943181CD26D800011408F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EB9431B1CD26D800011408F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EB9431C1CD26D800011408F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EB9431E1CD26D800011408F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeditateMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Personal.MeditateMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EB9431F1CD26D800011408F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MeditateMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Personal.MeditateMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EB943061CD26D800011408F /* Build configuration list for PBXProject "MeditateMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB9431B1CD26D800011408F /* Debug */,
+				7EB9431C1CD26D800011408F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EB9431D1CD26D800011408F /* Build configuration list for PBXNativeTarget "MeditateMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB9431E1CD26D800011408F /* Debug */,
+				7EB9431F1CD26D800011408F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EB943031CD26D800011408F /* Project object */;
+}
