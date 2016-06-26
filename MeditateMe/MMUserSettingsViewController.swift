@@ -10,15 +10,47 @@ import UIKit
 
 
 
-class MMUserSettingsViewController: UIViewController {
+class MMUserSettingsViewController: UITableViewController {
     
-    @IBAction func SwipeUserSettingsClosed(sender: UISwipeGestureRecognizer) {
-        self.dismissViewControllerAnimated(false, completion: nil)
-    }
+    let defaultPreparationTimer: Int = 20
+    let defaultMeditationTimer: Int = 300
+    var enableSounds: Bool = true
+    
+    
+    let settingsTextPreparationTimer: String = "Preparation Timer:"
+    let settingsTextMeditationTimer: String = "Meditation Timer:"
+    let settingsTextEnableSounds: String = "Enable Sounds"
+    
+    @IBOutlet weak var PreparationTimerText: UILabel!
+    @IBOutlet weak var PreparationTimerValue: UITextField!
+    
+    @IBOutlet weak var MeditationTimerText: UILabel!
+    @IBOutlet weak var MeditationTimerValue: UITextField!
+    
+    @IBOutlet weak var EnableSoundsText: UILabel!
+    @IBOutlet weak var EnableSoundsSwitch: UISwitch!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clearColor()
         view.opaque = false
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        prefs.setInteger(defaultPreparationTimer, forKey: "PreparationTimer")
+        prefs.setInteger(defaultMeditationTimer, forKey: "MeditationTimer")
+        prefs.setBool(enableSounds, forKey: "EnableSounds")
+        
+        PreparationTimerText.text = settingsTextPreparationTimer
+        PreparationTimerValue.text = String(prefs.integerForKey("PreparationTimer"))
+        
+        MeditationTimerText.text = settingsTextMeditationTimer
+        MeditationTimerValue.text = String(prefs.integerForKey("MeditationTimer:"))
+        
+        EnableSoundsText.text = settingsTextEnableSounds
+        EnableSoundsSwitch.setOn(enableSounds, animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {
