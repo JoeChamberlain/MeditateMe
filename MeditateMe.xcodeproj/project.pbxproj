@@ -16,7 +16,6 @@
 		7EB943141CD26D800011408F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943121CD26D800011408F /* Main.storyboard */; };
 		7EB943161CD26D800011408F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943151CD26D800011408F /* Assets.xcassets */; };
 		7EB943191CD26D800011408F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943171CD26D800011408F /* LaunchScreen.storyboard */; };
-		7EF7E18D1D1F08DF0002B28B /* MMUserSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7E18C1D1F08DF0002B28B /* MMUserSettingsTableViewCell.swift */; };
 		7EF7E1911D1F33C70002B28B /* MMUserSettingsViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7E1901D1F33C70002B28B /* MMUserSettingsViewControllerContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		7EB943151CD26D800011408F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EB943181CD26D800011408F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EB9431A1CD26D800011408F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF7E18C1D1F08DF0002B28B /* MMUserSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMUserSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		7EF7E1901D1F33C70002B28B /* MMUserSettingsViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MMUserSettingsViewControllerContainer.swift; path = ../MMUserSettingsViewControllerContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +69,6 @@
 				7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */,
 				7EF7E1901D1F33C70002B28B /* MMUserSettingsViewControllerContainer.swift */,
 				7EB943121CD26D800011408F /* Main.storyboard */,
-				7EF7E18C1D1F08DF0002B28B /* MMUserSettingsTableViewCell.swift */,
 				7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */,
 				7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */,
 				7E2EA6621D00FABA00090D08 /* MMTutorialPageViewController.swift */,
@@ -156,7 +153,6 @@
 				7EB943111CD26D800011408F /* ViewController.swift in Sources */,
 				7E5FDCE41CD7B61500FEF026 /* MMDismissAnimator.swift in Sources */,
 				7EF7E1911D1F33C70002B28B /* MMUserSettingsViewControllerContainer.swift in Sources */,
-				7EF7E18D1D1F08DF0002B28B /* MMUserSettingsTableViewCell.swift in Sources */,
 				7EB9430F1CD26D800011408F /* AppDelegate.swift in Sources */,
 				7E2EA6631D00FABA00090D08 /* MMTutorialPageViewController.swift in Sources */,
 				7E5FDCE21CD6F27000FEF026 /* MMUserSettingsViewController.swift in Sources */,

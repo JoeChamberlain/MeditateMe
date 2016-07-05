@@ -9,6 +9,11 @@
 import UIKit
 
 class MMUserSettingsViewControllerContainer: UIViewController {
+    
+    @IBAction func DismissUserSettingsButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clearColor()

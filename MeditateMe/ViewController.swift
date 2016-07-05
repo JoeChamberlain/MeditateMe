@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var buttonStartTimerOutlet: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     let timerController = MMButtonStartTimerController()
     
@@ -18,7 +19,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        settingsButton.setTitle(NSString(string: "\u{2699}") as String, forState: UIControlState.Normal)
         timerController.timerControllerDataSource = self
     }
     
