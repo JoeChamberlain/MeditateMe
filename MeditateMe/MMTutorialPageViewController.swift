@@ -10,6 +10,8 @@ import UIKit
 
 class MMTutorialPageViewController: UIPageViewController {
 
+    var didCompleteTutorial = false
+    
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController("TutorialWelcome"),
                 self.newColoredViewController("TutorialDescription"),
@@ -34,14 +36,21 @@ class MMTutorialPageViewController: UIPageViewController {
         
         dataSource = self
         
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .Forward,
-                               animated: true,
-                               completion: nil)
+        let storyboard = UIStoryboard(name: "tutorialViewController", bundle: NSBundle.mainBundle())
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainViewController")
+        
+        if(didCompleteTutorial) {
+            self.navigationController?.pushViewController(mainViewController, animated: false)
+        } else {
+            if let firstViewController = orderedViewControllers.first {
+                setViewControllers([firstViewController],
+                                   direction: .Forward,
+                                   animated: true,
+                                   completion: nil)
+            }
+            stylePageControl()
         }
         
-        stylePageControl()
     }
 }
 

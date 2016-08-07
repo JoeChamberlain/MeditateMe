@@ -16,7 +16,6 @@ class MMButtonStartTimerController: NSObject {
     
     var startTimerCounter = 0
     let startTimerResetText = "Start"
-    
     var startTimerPressed = false
     var startTimerPaused = false
     var startTimer = NSTimer()
@@ -25,37 +24,48 @@ class MMButtonStartTimerController: NSObject {
     
     func MainTimerTapped() {
         
+        //If the timer is pressed and not already paused, pause it.
         if(startTimerPressed && !startTimerPaused) {
             startTimerPaused = true
             PauseTimer()
         }
+        //If the timer is pressed and paused, unpause it.
         else if(startTimerPressed && startTimerPaused) {
             startTimerPaused = false
             
-            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountUp), userInfo: nil, repeats: true)
+            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
+        //If the timer is not pressed and not paused then count down one second.
         else if(!startTimerPressed && !startTimerPaused) {
             startTimerPressed = true
-            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountUp), userInfo: nil, repeats: true)
+            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
         
     }
     
-    func CountUp() {
-        startTimerCounter += 1
+    func CountDown() {
+        //Decrement timer by one second.
+        startTimerCounter -= 1
+        
         if let dataSource = timerControllerDataSource {
             dataSource.timerText("\(startTimerCounter)")
+        }
+        
+        //Reset the timer when it reaches zero.
+        if startTimerCounter == 0 {
+            ResetTimer()
         }
     }
     
     func PauseTimer() {
+        //Invalidating a timer pauses it.
         startTimer.invalidate()
     }
     
     func ResetTimer() {
         startTimer.invalidate()
         
-        startTimerCounter = 0
+        startTimerCounter = 10
         startTimerPressed = false
         startTimerPaused = false
         
@@ -63,4 +73,6 @@ class MMButtonStartTimerController: NSObject {
             dataSource.timerText("\(startTimerResetText)")
         }
     }
+    
+    
 }

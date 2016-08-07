@@ -14,12 +14,14 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var settingsButton: UIButton!
     
     let timerController = MMButtonStartTimerController()
-    
     var shouldResetTimer = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Settings button set to Unicode character for cog "image"
         settingsButton.setTitle(NSString(string: "\u{2699}") as String, forState: UIControlState.Normal)
+        
         timerController.timerControllerDataSource = self
     }
     

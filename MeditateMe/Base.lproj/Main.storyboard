@@ -44,6 +44,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="PreparationTimerEditingEnd:" destination="WLo-kj-hqv" eventType="editingDidEnd" id="Dnw-ng-BKc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -218,15 +221,15 @@
         <!--Tutorial Page View Controller-->
         <scene sceneID="M4F-W3-TgH">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kf5-j2-JdX" customClass="MMTutorialPageViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="tutorialViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kf5-j2-JdX" customClass="MMTutorialPageViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qp-Sq-qBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-333" y="383"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial1-->
         <scene sceneID="V6w-ce-8iC">
             <objects>
-                <viewController storyboardIdentifier="TutorialWelcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ek5-d7-gC2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialWelcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ek5-d7-gC2" userLabel="Tutorial1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ohJ-LM-KF4"/>
                         <viewControllerLayoutGuide type="bottom" id="ExT-Ri-Anc"/>
@@ -267,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="-987" y="1086"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial2-->
         <scene sceneID="XZg-fi-kds">
             <objects>
-                <viewController storyboardIdentifier="TutorialDescription" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Iz-Eu-pJm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialDescription" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Iz-Eu-pJm" userLabel="Tutorial2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6E6-NW-Tpi"/>
                         <viewControllerLayoutGuide type="bottom" id="JKF-70-aAd"/>
@@ -280,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiB-Zt-5mO">
-                                <rect key="frame" x="20" y="31" width="560" height="264.5"/>
+                                <rect key="frame" x="20" y="31" width="560" height="265"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -291,7 +294,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-Bg-jQR">
-                                <rect key="frame" x="272" y="381" width="57" height="30"/>
+                                <rect key="frame" x="244" y="331" width="57" height="30"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="ohe-qt-A9g" kind="presentation" id="GlY-hu-2yP"/>
@@ -300,15 +303,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9ik-Bg-jQR" firstAttribute="top" secondItem="yiB-Zt-5mO" secondAttribute="bottom" constant="85.5" id="63P-yR-x6N"/>
                             <constraint firstItem="9ik-Bg-jQR" firstAttribute="width" secondItem="UKW-0m-Gsg" secondAttribute="height" multiplier="19:200" id="BdJ-LZ-dDM"/>
-                            <constraint firstItem="9ik-Bg-jQR" firstAttribute="top" secondItem="yiB-Zt-5mO" secondAttribute="bottom" constant="85.5" id="Cii-4S-g8S"/>
-                            <constraint firstItem="JKF-70-aAd" firstAttribute="top" secondItem="9ik-Bg-jQR" secondAttribute="bottom" constant="189" id="OZ2-qD-Qbk"/>
                             <constraint firstItem="yiB-Zt-5mO" firstAttribute="trailing" secondItem="UKW-0m-Gsg" secondAttribute="trailingMargin" id="f1P-ae-34I"/>
+                            <constraint firstItem="yiB-Zt-5mO" firstAttribute="top" secondItem="6E6-NW-Tpi" secondAttribute="bottom" constant="11" id="f4g-DG-FKa"/>
+                            <constraint firstItem="9ik-Bg-jQR" firstAttribute="top" secondItem="yiB-Zt-5mO" secondAttribute="bottom" constant="35" id="mHG-4h-FRj"/>
                             <constraint firstItem="yiB-Zt-5mO" firstAttribute="leading" secondItem="UKW-0m-Gsg" secondAttribute="leadingMargin" id="nBe-w6-Z3R"/>
                             <constraint firstItem="yiB-Zt-5mO" firstAttribute="centerY" secondItem="UKW-0m-Gsg" secondAttribute="centerY" constant="-136.75" id="nHK-WJ-2Y9"/>
-                            <constraint firstItem="9ik-Bg-jQR" firstAttribute="leading" secondItem="UKW-0m-Gsg" secondAttribute="leadingMargin" constant="252" id="phu-tD-2nb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9ik-Bg-jQR" secondAttribute="trailing" constant="251" id="rEm-qU-smu"/>
+                            <constraint firstItem="9ik-Bg-jQR" firstAttribute="leading" secondItem="UKW-0m-Gsg" secondAttribute="leading" constant="244" id="xQE-mE-GWe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -321,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="-333" y="1086"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial3-->
         <scene sceneID="G68-G8-4yg">
             <objects>
-                <viewController storyboardIdentifier="TutorialSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hW4-Sm-HLC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hW4-Sm-HLC" userLabel="Tutorial3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KuT-aa-OxT"/>
                         <viewControllerLayoutGuide type="bottom" id="wL8-UV-uT7"/>
@@ -370,10 +371,10 @@
             </objects>
             <point key="canvasLocation" x="339" y="1086"/>
         </scene>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="BYZ-38-t0r" userLabel="Main" customClass="ViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -425,6 +426,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GlY-hu-2yP"/>
+        <segue reference="SFe-TE-C7B"/>
     </inferredMetricsTieBreakers>
 </document>

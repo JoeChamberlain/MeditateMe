@@ -8,18 +8,18 @@
 
 import UIKit
 
-
-
 class MMUserSettingsViewController: UITableViewController {
     
     let defaultPreparationTimer: Int = 20
     let defaultMeditationTimer: Int = 300
     var enableSounds: Bool = true
-    
-    
+
     let settingsTextPreparationTimer: String = "Preparation Timer:"
     let settingsTextMeditationTimer: String = "Meditation Timer:"
     let settingsTextEnableSounds: String = "Enable Sounds"
+    
+    //Set up storage variable for user preferences.
+    let prefs = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet weak var PreparationTimerText: UILabel!
     @IBOutlet weak var PreparationTimerValue: UITextField!
@@ -30,14 +30,13 @@ class MMUserSettingsViewController: UITableViewController {
     @IBOutlet weak var EnableSoundsText: UILabel!
     @IBOutlet weak var EnableSoundsSwitch: UISwitch!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = UIColor.clearColor()
         view.opaque = false
         
-        let prefs = NSUserDefaults.standardUserDefaults()
+        
         prefs.setInteger(defaultPreparationTimer, forKey: "PreparationTimer")
         prefs.setInteger(defaultMeditationTimer, forKey: "MeditationTimer")
         prefs.setBool(enableSounds, forKey: "EnableSounds")
@@ -57,7 +56,6 @@ class MMUserSettingsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
