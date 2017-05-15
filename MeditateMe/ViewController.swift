@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
+
+    let timerController = MMButtonStartTimerController()
+    var shouldResetTimer = false
     
     @IBOutlet weak var buttonStartTimerOutlet: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
-    let timerController = MMButtonStartTimerController()
-    var shouldResetTimer = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Settings button set to Unicode character for cog "image"
+        //Settings button set to Unicode character for cog "image" (2699)
         settingsButton.setTitle(NSString(string: "\u{2699}") as String, for: UIControlState())
         
         timerController.timerControllerDataSource = self

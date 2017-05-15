@@ -13,34 +13,43 @@ protocol TimerControllerDataSource {
 }
 
 class MMButtonStartTimerController: NSObject {
+    let startTimerResetText = "Start"
     
     var startTimerCounter = 0
-    let startTimerResetText = "Start"
     var startTimerPressed = false
     var startTimerPaused = false
+    var prepTimerFinished = false
     var startTimer = Timer()
     
     var timerControllerDataSource: TimerControllerDataSource?
     
     func MainTimerTapped() {
+        SetPrepTimer()
         
+        TimerStateController()
+    }
+    
+    func SetPrepTimer() {
+        startTimerCounter = UserDefaults.standard.integer(forKey: "PreparationTimer:")
+    }
+    
+    func TimerStateController() {
         //If the timer is pressed and not already paused, pause it.
         if(startTimerPressed && !startTimerPaused) {
             startTimerPaused = true
             PauseTimer()
         }
-        //If the timer is pressed and paused, unpause it.
+            //If the timer is pressed and paused, unpause it.
         else if(startTimerPressed && startTimerPaused) {
             startTimerPaused = false
             
             startTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
-        //If the timer is not pressed and not paused then count down one second.
+            //If the timer is not pressed and not paused then count down one second.
         else if(!startTimerPressed && !startTimerPaused) {
             startTimerPressed = true
             startTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
-        
     }
     
     func CountDown() {
@@ -52,7 +61,12 @@ class MMButtonStartTimerController: NSObject {
         }
         
         //Reset the timer when it reaches zero.
-        if startTimerCounter == 0 {
+        if (startTimerCounter == 0 && !prepTimerFinished) {
+            prepTimerFinished = !prepTimerFinished
+            ResetTimer()
+        }
+        else if (startTimerCounter == 0 && prepTimerFinished) {
+            prepTimerFinished = false
             ResetTimer()
         }
     }
@@ -65,7 +79,12 @@ class MMButtonStartTimerController: NSObject {
     func ResetTimer() {
         startTimer.invalidate()
         
-        startTimerCounter = 10
+        if(prepTimerFinished) {
+            startTimerCounter = UserDefaults.standard.integer(forKey: "MeditationTimer:")
+            CountDown()
+        }
+        
+        SetPrepTimer()
         startTimerPressed = false
         startTimerPaused = false
         
