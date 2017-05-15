@@ -20,29 +20,29 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         super.viewDidLoad()
         
         //Settings button set to Unicode character for cog "image"
-        settingsButton.setTitle(NSString(string: "\u{2699}") as String, forState: UIControlState.Normal)
+        settingsButton.setTitle(NSString(string: "\u{2699}") as String, for: UIControlState())
         
         timerController.timerControllerDataSource = self
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationViewController = segue.destinationViewController as? MMUserSettingsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? MMUserSettingsViewController {
             destinationViewController.transitioningDelegate = self
         }
     }
     
-    @IBAction func startButtonTapped(sender: AnyObject) {
+    @IBAction func startButtonTapped(_ sender: AnyObject) {
         timerController.MainTimerTapped()
     }
 
-    @IBAction func startButtonLongPress(sender: AnyObject) {
+    @IBAction func startButtonLongPress(_ sender: AnyObject) {
         timerController.ResetTimer()
     }
 }
 
 extension ViewController : TimerControllerDataSource {
-    func timerText(text: String) {
-        self.buttonStartTimerOutlet.setTitle(text, forState: .Normal)
+    func timerText(_ text: String) {
+        self.buttonStartTimerOutlet.setTitle(text, for: UIControlState())
     }
 }
 

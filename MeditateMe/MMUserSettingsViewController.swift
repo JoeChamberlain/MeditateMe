@@ -19,7 +19,7 @@ class MMUserSettingsViewController: UITableViewController {
     let settingsTextEnableSounds: String = "Enable Sounds"
     
     //Set up storage variable for user preferences.
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet weak var PreparationTimerText: UILabel!
     @IBOutlet weak var PreparationTimerValue: UITextField!
@@ -33,19 +33,19 @@ class MMUserSettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.clearColor()
-        view.opaque = false
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
         
         
-        prefs.setInteger(defaultPreparationTimer, forKey: "PreparationTimer")
-        prefs.setInteger(defaultMeditationTimer, forKey: "MeditationTimer")
-        prefs.setBool(enableSounds, forKey: "EnableSounds")
+        prefs.set(defaultPreparationTimer, forKey: "PreparationTimer")
+        prefs.set(defaultMeditationTimer, forKey: "MeditationTimer")
+        prefs.set(enableSounds, forKey: "EnableSounds")
         
         PreparationTimerText.text = settingsTextPreparationTimer
-        PreparationTimerValue.text = String(prefs.integerForKey("PreparationTimer"))
+        PreparationTimerValue.text = String(prefs.integer(forKey: "PreparationTimer"))
         
         MeditationTimerText.text = settingsTextMeditationTimer
-        MeditationTimerValue.text = String(prefs.integerForKey("MeditationTimer:"))
+        MeditationTimerValue.text = String(prefs.integer(forKey: "MeditationTimer:"))
         
         EnableSoundsText.text = settingsTextEnableSounds
         EnableSoundsSwitch.setOn(enableSounds, animated: true)

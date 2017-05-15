@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TimerControllerDataSource {
-    func timerText(text:String)
+    func timerText(_ text:String)
 }
 
 class MMButtonStartTimerController: NSObject {
@@ -18,7 +18,7 @@ class MMButtonStartTimerController: NSObject {
     let startTimerResetText = "Start"
     var startTimerPressed = false
     var startTimerPaused = false
-    var startTimer = NSTimer()
+    var startTimer = Timer()
     
     var timerControllerDataSource: TimerControllerDataSource?
     
@@ -33,12 +33,12 @@ class MMButtonStartTimerController: NSObject {
         else if(startTimerPressed && startTimerPaused) {
             startTimerPaused = false
             
-            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
+            startTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
         //If the timer is not pressed and not paused then count down one second.
         else if(!startTimerPressed && !startTimerPaused) {
             startTimerPressed = true
-            startTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
+            startTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MMButtonStartTimerController.CountDown), userInfo: nil, repeats: true)
         }
         
     }

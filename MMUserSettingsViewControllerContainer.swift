@@ -11,15 +11,15 @@ import UIKit
 class MMUserSettingsViewControllerContainer: UIViewController {
     
     //Dismiss settings X
-    @IBAction func DismissUserSettingsButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func DismissUserSettingsButton(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.clearColor()
-        view.opaque = false
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
     }
     
     override func didReceiveMemoryWarning() {

@@ -12,22 +12,22 @@ class MMTutorialPageViewController: UIPageViewController {
 
     var didCompleteTutorial = false
     
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
+    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController("TutorialWelcome"),
                 self.newColoredViewController("TutorialDescription"),
                 self.newColoredViewController("TutorialSettings")]
     }()
     
-    private func newColoredViewController(TutorialName: String) -> UIViewController {
+    fileprivate func newColoredViewController(_ TutorialName: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewControllerWithIdentifier("\(TutorialName)")
+            instantiateViewController(withIdentifier: "\(TutorialName)")
     }
     
-    private func stylePageControl() {
-        let pageControl = UIPageControl.appearanceWhenContainedInInstancesOfClasses([self.dynamicType])
+    fileprivate func stylePageControl() {
+        let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: [type(of: self)])
         
-        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
-        pageControl.pageIndicatorTintColor = UIColor.whiteColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.white
         pageControl.backgroundColor = UIColor(white: 1, alpha: 0.5)
     }
     
@@ -36,15 +36,15 @@ class MMTutorialPageViewController: UIPageViewController {
         
         dataSource = self
         
-        let storyboard = UIStoryboard(name: "tutorialViewController", bundle: NSBundle.mainBundle())
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("mainViewController")
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "mainViewController")
         
         if(didCompleteTutorial) {
             self.navigationController?.pushViewController(mainViewController, animated: false)
         } else {
             if let firstViewController = orderedViewControllers.first {
                 setViewControllers([firstViewController],
-                                   direction: .Forward,
+                                   direction: .forward,
                                    animated: true,
                                    completion: nil)
             }
@@ -58,9 +58,9 @@ class MMTutorialPageViewController: UIPageViewController {
 
 extension MMTutorialPageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -79,9 +79,9 @@ extension MMTutorialPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -101,13 +101,13 @@ extension MMTutorialPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[nextIndex]
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return orderedViewControllers.count
     }
     
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
-            firstViewControllerIndex = orderedViewControllers.indexOf(firstViewController) else {
+            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
                 return 0
         }
         
