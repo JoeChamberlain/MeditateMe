@@ -41,6 +41,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             let vc = segue.destination as! MMUserSettingsViewController
             defaultPrepTimer = vc.defaultMeditationTimer!
             defaultPrepTimer = vc.defaultPreparationTimer!
+            vc.dismiss(animated: true, completion: nil)
         }
         
         if let destinationViewController = segue.destination as? MMUserSettingsViewController {

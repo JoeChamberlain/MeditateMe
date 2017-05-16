@@ -25,8 +25,8 @@ class MMUserSettingsViewController: UITableViewController {
     @IBOutlet weak var MeditationTimerValue: UITextField!
 
     @IBAction func SaveSettingsButton(_ sender: AnyObject) {
-        performSegue(withIdentifier: "SettingsSaved", sender: self)
         self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "SettingsSaved", sender: self)
     }
     
     @IBAction func MeditationEditingEnded(_ sender: UITextField) {

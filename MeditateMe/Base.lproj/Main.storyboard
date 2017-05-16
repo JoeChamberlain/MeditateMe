@@ -25,6 +25,7 @@
                             <state key="normal" title="Save"/>
                             <connections>
                                 <action selector="SaveSettingsButton:" destination="WLo-kj-hqv" eventType="touchUpInside" id="Rbz-aS-9kz"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="SettingsSaved" id="oX2-WY-7dT"/>
                             </connections>
                         </button>
                         <sections>
@@ -38,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparation Timer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4p-XC-ekT">
-                                                    <rect key="frame" x="8" y="11" width="141.5" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="142" height="21"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                     </accessibility>
@@ -49,11 +50,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4U-WJ-tOM">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4U-WJ-tOM">
                                                     <rect key="frame" x="157" y="7" width="210" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Q4U-WJ-tOM" secondAttribute="height" multiplier="71:6" constant="-145" id="NJD-D2-frh"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -63,14 +61,10 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a4p-XC-ekT" firstAttribute="leading" secondItem="Wr1-aN-cgF" secondAttribute="leadingMargin" id="Bc8-Ya-4bt"/>
-                                                <constraint firstItem="Q4U-WJ-tOM" firstAttribute="leading" secondItem="a4p-XC-ekT" secondAttribute="trailing" constant="8" id="JXN-k4-M2F"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="a4p-XC-ekT" secondAttribute="bottom" constant="3.5" id="M3L-UG-KWR"/>
-                                                <constraint firstItem="Q4U-WJ-tOM" firstAttribute="top" secondItem="Wr1-aN-cgF" secondAttribute="topMargin" constant="-1" id="O7D-wZ-axq"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Q4U-WJ-tOM" secondAttribute="bottom" constant="-1.5" id="PIP-VO-syF"/>
-                                                <constraint firstItem="a4p-XC-ekT" firstAttribute="top" secondItem="Wr1-aN-cgF" secondAttribute="topMargin" constant="3" id="VMs-E8-0y4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Q4U-WJ-tOM" secondAttribute="trailing" id="gOz-D8-zFT"/>
-                                                <constraint firstItem="Q4U-WJ-tOM" firstAttribute="leading" secondItem="a4p-XC-ekT" secondAttribute="trailing" constant="8" id="hfF-X2-xJ5"/>
+                                                <constraint firstItem="a4p-XC-ekT" firstAttribute="centerY" secondItem="Wr1-aN-cgF" secondAttribute="centerY" id="AdY-dX-uDc"/>
+                                                <constraint firstItem="a4p-XC-ekT" firstAttribute="centerY" secondItem="Q4U-WJ-tOM" secondAttribute="centerY" id="Gzt-SP-e9n"/>
+                                                <constraint firstItem="Q4U-WJ-tOM" firstAttribute="leading" secondItem="a4p-XC-ekT" secondAttribute="trailing" constant="7" id="KtQ-FT-nMY"/>
+                                                <constraint firstItem="a4p-XC-ekT" firstAttribute="leading" secondItem="Wr1-aN-cgF" secondAttribute="leadingMargin" id="b6l-E7-GQZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -83,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation Timer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-nd-qW6">
-                                                    <rect key="frame" x="8" y="11" width="134.5" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="135" height="21"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                     </accessibility>
@@ -94,11 +88,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ik-Z5-kvn">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ik-Z5-kvn">
                                                     <rect key="frame" x="157" y="7" width="210" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="7ik-Z5-kvn" secondAttribute="height" multiplier="71:6" constant="-145" id="aMr-Y0-uY2"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -107,14 +98,10 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="7ik-Z5-kvn" secondAttribute="bottom" constant="-1.5" id="1gO-ja-7t1"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7ik-Z5-kvn" secondAttribute="trailing" id="3ev-Il-9I9"/>
-                                                <constraint firstItem="7ik-Z5-kvn" firstAttribute="top" secondItem="H3f-28-S0x" secondAttribute="topMargin" constant="-1" id="9XW-IJ-Tk2"/>
-                                                <constraint firstItem="7ik-Z5-kvn" firstAttribute="leading" secondItem="7tk-nd-qW6" secondAttribute="trailing" constant="15" id="dQO-Xy-hue"/>
-                                                <constraint firstItem="7tk-nd-qW6" firstAttribute="leading" secondItem="H3f-28-S0x" secondAttribute="leadingMargin" id="eze-Ii-pOw"/>
-                                                <constraint firstItem="7ik-Z5-kvn" firstAttribute="leading" secondItem="7tk-nd-qW6" secondAttribute="trailing" constant="15" id="so8-Wj-29i"/>
-                                                <constraint firstItem="7tk-nd-qW6" firstAttribute="top" secondItem="H3f-28-S0x" secondAttribute="topMargin" constant="3" id="xXB-HT-AA4"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="7tk-nd-qW6" secondAttribute="bottom" constant="3.5" id="yzB-Fs-YgV"/>
+                                                <constraint firstItem="7ik-Z5-kvn" firstAttribute="leading" secondItem="7tk-nd-qW6" secondAttribute="trailing" constant="14" id="ZHW-mf-5LE"/>
+                                                <constraint firstItem="7tk-nd-qW6" firstAttribute="centerY" secondItem="H3f-28-S0x" secondAttribute="centerY" id="bq9-Vq-phq"/>
+                                                <constraint firstItem="7tk-nd-qW6" firstAttribute="leading" secondItem="H3f-28-S0x" secondAttribute="leadingMargin" id="idC-d4-9o5"/>
+                                                <constraint firstItem="7tk-nd-qW6" firstAttribute="centerY" secondItem="7ik-Z5-kvn" secondAttribute="centerY" id="nZc-4a-SZv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -136,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNT-l9-cva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="381.85907046476763"/>
+            <point key="canvasLocation" x="1001" y="366"/>
         </scene>
         <!--Tutorial Page View Controller-->
         <scene sceneID="M4F-W3-TgH">
@@ -144,7 +131,7 @@
                 <pageViewController storyboardIdentifier="tutorialViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kf5-j2-JdX" customClass="MMTutorialPageViewController" customModule="MeditateMe" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qp-Sq-qBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-333" y="383"/>
+            <point key="canvasLocation" x="-1111" y="1059"/>
         </scene>
         <!--Tutorial1-->
         <scene sceneID="V6w-ce-8iC">
@@ -216,6 +203,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-Bg-jQR">
                                 <rect key="frame" x="244" y="397.5" width="57" height="30"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="WLo-kj-hqv" kind="presentation" id="iCy-hW-Uat"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cv-wB-U94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="1060"/>
+            <point key="canvasLocation" x="1062" y="1059"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
@@ -339,7 +329,11 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="339" y="383"/>
+            <point key="canvasLocation" x="1774" y="1058"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uBI-ra-GKt"/>
+        <segue reference="oX2-WY-7dT"/>
+    </inferredMetricsTieBreakers>
 </document>

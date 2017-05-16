@@ -12,7 +12,6 @@
 		7E5FDCE01CD5107C00FEF026 /* MMButtonStartTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */; };
 		7E5FDCE21CD6F27000FEF026 /* MMUserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */; };
 		7E5FDCE41CD7B61500FEF026 /* MMDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */; };
-		7EB4468D1ECA8E8800CBFB5A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4468C1ECA8E8800CBFB5A /* Settings.bundle */; };
 		7EB9430F1CD26D800011408F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9430E1CD26D800011408F /* AppDelegate.swift */; };
 		7EB943111CD26D800011408F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB943101CD26D800011408F /* ViewController.swift */; };
 		7EB943161CD26D800011408F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB943151CD26D800011408F /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		7E5FDCDF1CD5107C00FEF026 /* MMButtonStartTimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMButtonStartTimerController.swift; sourceTree = "<group>"; };
 		7E5FDCE11CD6F27000FEF026 /* MMUserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMUserSettingsViewController.swift; sourceTree = "<group>"; };
 		7E5FDCE31CD7B61500FEF026 /* MMDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDismissAnimator.swift; sourceTree = "<group>"; };
-		7EB4468C1ECA8E8800CBFB5A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7EB9430B1CD26D800011408F /* MeditateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB9430E1CD26D800011408F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EB943101CD26D800011408F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 		7EB943021CD26D800011408F = {
 			isa = PBXGroup;
 			children = (
-				7EB4468C1ECA8E8800CBFB5A /* Settings.bundle */,
 				7EB9430D1CD26D800011408F /* MeditateMe */,
 				7EB9430C1CD26D800011408F /* Products */,
 			);
@@ -136,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E05C2421E2EF3F100BFEF25 /* Main.storyboard in Resources */,
-				7EB4468D1ECA8E8800CBFB5A /* Settings.bundle in Resources */,
 				7EB943161CD26D800011408F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
