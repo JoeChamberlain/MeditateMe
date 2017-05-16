@@ -9,16 +9,12 @@
 import UIKit
 
 class MMUserSettingsViewController: UITableViewController {
-    @IBAction func MeditationEditingEnded(_ sender: UITextField) {
-        UserDefaults.standard.set(MeditationTimerValue.text, forKey: "MeditationTimer")
-    }
-    @IBAction func PrepEditingEnded(_ sender: UITextField) {
-        UserDefaults.standard.set(PreparationTimerValue.text, forKey: "PreparationTimer")
-    }
     
-    let defaultPreparationTimer: Int = 20
-    let defaultMeditationTimer: Int = 300
-
+    let defaults: UserDefaults = UserDefaults.standard
+    
+    var defaultPreparationTimer: Int?
+    var defaultMeditationTimer: Int?
+    
     let settingsTextPreparationTimer: String = "Preparation Timer:"
     let settingsTextMeditationTimer: String = "Meditation Timer:"
     
@@ -29,9 +25,18 @@ class MMUserSettingsViewController: UITableViewController {
     @IBOutlet weak var MeditationTimerValue: UITextField!
 
     @IBAction func SaveSettingsButton(_ sender: AnyObject) {
+        performSegue(withIdentifier: "SettingsSaved", sender: self)
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func MeditationEditingEnded(_ sender: UITextField) {
+        defaultMeditationTimer = Int(MeditationTimerValue.text!)
+        defaults.set(MeditationTimerValue.text, forKey: "MeditationTimer")
+    }
+    @IBAction func PrepEditingEnded(_ sender: UITextField) {
+        defaultPreparationTimer = Int(PreparationTimerValue.text!)
+        defaults.set(PreparationTimerValue.text, forKey: "PreparationTimer")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,20 +44,20 @@ class MMUserSettingsViewController: UITableViewController {
         view.backgroundColor = UIColor.white
         view.isOpaque = true
         
-        UserDefaults.standard.set(defaultPreparationTimer, forKey: "PreparationTimer")
-        UserDefaults.standard.set(defaultMeditationTimer, forKey: "MeditationTimer")
+        defaultPreparationTimer = defaults.integer(forKey: "PreparationTimer")
+        defaultMeditationTimer = defaults.integer(forKey: "MeditationTimer")
         
         PreparationTimerText.text = settingsTextPreparationTimer
-        PreparationTimerValue.text = String(UserDefaults.standard.integer(forKey: "PreparationTimer"))
-        
+        PreparationTimerValue.text = String(defaultPreparationTimer!)
         MeditationTimerText.text = settingsTextMeditationTimer
-        MeditationTimerValue.text = String(UserDefaults.standard.integer(forKey: "MeditationTimer:"))
+        MeditationTimerValue.text = String(defaultMeditationTimer!)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
     /*
     // MARK: - Navigation

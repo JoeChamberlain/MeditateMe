@@ -12,9 +12,20 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     let timerController = MMButtonStartTimerController()
     var shouldResetTimer = false
+    var defaultMediTimer = 0
+    var defaultPrepTimer = 0
+    
+    @IBAction func startButtonTapped(_ sender: AnyObject) {
+        timerController.MainTimerTapped(prepTimerDefault: defaultPrepTimer, mediTimerDefault: defaultMediTimer)
+    }
+    
+    @IBAction func startButtonLongPress(_ sender: AnyObject) {
+        timerController.ResetTimer()
+    }
     
     @IBOutlet weak var buttonStartTimerOutlet: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +37,17 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "SettingsSaved") {
+            let vc = segue.destination as! MMUserSettingsViewController
+            defaultPrepTimer = vc.defaultMeditationTimer!
+            defaultPrepTimer = vc.defaultPreparationTimer!
+        }
+        
         if let destinationViewController = segue.destination as? MMUserSettingsViewController {
             destinationViewController.transitioningDelegate = self
         }
     }
-    
-    @IBAction func startButtonTapped(_ sender: AnyObject) {
-        timerController.MainTimerTapped()
-    }
 
-    @IBAction func startButtonLongPress(_ sender: AnyObject) {
-        timerController.ResetTimer()
-    }
 }
 
 extension ViewController : TimerControllerDataSource {

@@ -15,6 +15,8 @@ protocol TimerControllerDataSource {
 class MMButtonStartTimerController: NSObject {
     let startTimerResetText = "Start"
     
+    var defaultMediTimer = 0
+    var defaultPrepTimer = 0
     var startTimerCounter = 0
     var startTimerPressed = false
     var startTimerPaused = false
@@ -23,14 +25,11 @@ class MMButtonStartTimerController: NSObject {
     
     var timerControllerDataSource: TimerControllerDataSource?
     
-    func MainTimerTapped() {
-        SetPrepTimer()
+    func MainTimerTapped(prepTimerDefault: Int, mediTimerDefault: Int) {
+        defaultMediTimer = mediTimerDefault
+        defaultPrepTimer = prepTimerDefault
         
         TimerStateController()
-    }
-    
-    func SetPrepTimer() {
-        startTimerCounter = UserDefaults.standard.integer(forKey: "PreparationTimer:")
     }
     
     func TimerStateController() {
@@ -80,11 +79,11 @@ class MMButtonStartTimerController: NSObject {
         startTimer.invalidate()
         
         if(prepTimerFinished) {
-            startTimerCounter = UserDefaults.standard.integer(forKey: "MeditationTimer:")
+            startTimerCounter = defaultMediTimer
             CountDown()
         }
         
-        SetPrepTimer()
+        startTimerCounter = defaultPrepTimer
         startTimerPressed = false
         startTimerPaused = false
         
